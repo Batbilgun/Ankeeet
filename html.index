@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cute surprise questionnaire website with smooth transitions"
+    />
+    <title>Surprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="sparkles" aria-hidden="true">
+      <span class="sparkle s1"></span>
+      <span class="sparkle s2"></span>
+      <span class="sparkle s3"></span>
+      <span class="sparkle s4"></span>
+      <span class="sparkle s5"></span>
+      <span class="sparkle s6"></span>
+      <span class="sparkle s7"></span>
+      <span class="sparkle s8"></span>
+    </div>
+
+    <main class="app" aria-live="polite">
+      <section class="screen active" data-stage="1" aria-label="Stage 1">
+        <div class="card">
+          <div class="tiny-badge">cute surprise</div>
+          <h1>What's your favorite color? 🎀</h1>
+
+          <form class="stage-form" data-stage="1">
+            <label class="sr-only" for="colorInput">Favorite color</label>
+            <input
+              id="colorInput"
+              type="text"
+              name="color"
+              autocomplete="off"
+              placeholder="Type your answer"
+            />
+            <button type="submit">Next →</button>
+          </form>
+          <p class="helper-text" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="screen" data-stage="2" aria-label="Stage 2">
+        <div class="card">
+          <div class="tiny-badge">cute surprise</div>
+          <h1>What's your favorite movie? 🎬</h1>
+
+          <form class="stage-form" data-stage="2">
+            <label class="sr-only" for="movieInput">Favorite movie</label>
+            <input
+              id="movieInput"
+              type="text"
+              name="movie"
+              autocomplete="off"
+              placeholder="Type your answer"
+            />
+            <button type="submit">Next →</button>
+          </form>
+          <p class="helper-text" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="screen" data-stage="3" aria-label="Stage 3">
+        <div class="card">
+          <div class="tiny-badge">cute surprise</div>
+          <h1>What's your movie? 🎥</h1>
+
+          <form class="stage-form" data-stage="3">
+            <label class="sr-only" for="anotherMovieInput">Another movie</label>
+            <input
+              id="anotherMovieInput"
+              type="text"
+              name="movieTwo"
+              autocomplete="off"
+              placeholder="Type your answer"
+            />
+            <button type="submit">Next →</button>
+          </form>
+          <p class="helper-text" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="screen" data-stage="4" aria-label="Stage 4">
+        <div class="card">
+          <div class="tiny-badge">almost there</div>
+          <h1>One last question ✨</h1>
+
+          <p class="passcode-copy">Enter the passcode to see what's next.</p>
+
+          <form class="stage-form" data-stage="4">
+            <label class="sr-only" for="passcodeInput">Passcode</label>
+            <input
+              id="passcodeInput"
+              type="text"
+              name="passcode"
+              autocomplete="off"
+              placeholder="Enter passcode"
+            />
+            <button type="submit">Next →</button>
+          </form>
+          <p class="helper-text error-message" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="screen final-screen" data-stage="5" aria-label="Final stage">
+        <div class="card reveal-card">
+          <h2>Here's your surprise! 🎀</h2>
+
+          <div class="image-shell">
+            <img
+              src="./questionnaire.png"
+              alt="Questionnaire image"
+              class="questionnaire-image"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
